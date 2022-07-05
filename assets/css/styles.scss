@@ -1,0 +1,347 @@
+@import 'reset';
+
+//---Variables-------------------------------------
+$main-color: #1a1a1a;
+$details-color: #c73636;
+$section-about-color: #fdfdfd;
+$section-testimonials-color: lighten($main-color, 40);
+$section-sponsor-color: #fdfdfd;
+$section-contact-color: #eeeeee;
+$text-color: #fff;
+$time-trasition: .3s;
+
+//---Inheritance-----------------------------------
+.flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.style-text {
+    text-decoration: none;
+    color: $text-color;
+    padding: .4rem 1rem;
+    display: inline-block;
+}
+
+.style-button {
+    @extend .style-text;
+    background-color: $details-color;
+    border-radius: 5px;
+    border: none;
+    padding: .4rem 1.5rem;
+    transition: text-shadow .2s, transform .2s;
+    cursor: pointer;
+
+    &:hover {
+        text-shadow: 0 0 1rem $text-color;
+        transform: scale(1.05);
+    }
+}
+
+.field-input-form {
+    margin-block: .5rem 1rem;
+    padding: .8rem 1rem;
+    border-radius: 5px;
+    width: 40vw;
+    border: 1px solid #6666;
+    font-size: .9rem;
+}
+
+.pseudo-element-menu {
+    content: '';
+    width: 100%;
+    height: 1px;
+    display: block;
+    position: absolute;
+    background-color: $text-color;
+}
+
+//---Apply to more than one tag--------------------
+.logo {
+    text-decoration: none;
+    font-size: 1.6rem;
+    color: $text-color;
+
+    span {
+        color: $details-color;
+        font-weight: 700;
+    }
+}
+
+h3 {
+    margin-block: .3rem 2.5rem;
+}
+
+
+.row {
+    width: 85vw;
+    margin: auto;
+    padding: 7rem 0;
+}
+
+//---Header----------------------------------------
+header {
+    height: 600px;
+    background: url(https://images.unsplash.com/photo-1414235077428-338989a2e8c0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80) no-repeat;
+    background-position: 0%;
+    background-size: cover;
+    position: relative;
+
+
+    &::after {
+        content: '';
+        background-color: rgba(0, 0, 0, .2);
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.text-header-container {
+    position: absolute;
+    top: 60%;
+    left: 7.5vw;
+}
+
+//---Navbar----------------------------------------
+i.fa-x, 
+i.fa-bars {
+    color: $text-color;
+    font-size: 1.2rem;
+    display: none;
+}
+
+.row-nav {
+    @extend .flex;
+    padding: 0;
+}
+
+nav {
+    padding: 1rem 0;
+    background-color: $main-color;
+    position: fixed;
+    z-index: 90;
+    top: 0;
+    width: 100vw;
+    transition: top $time-trasition;
+
+    ul {
+        @extend .flex;
+        gap: 1.2rem;
+
+        li {
+            list-style: none;
+
+            a {
+                @extend .style-text;
+                font-size: 1em;
+                overflow: hidden;
+                position: relative;
+
+                &::after {
+                    @extend .pseudo-element-menu;
+                    bottom: 0;
+                    left: -100%;
+                    transition: left $time-trasition;
+                }
+
+                &::before {
+                    @extend .pseudo-element-menu;
+                    top: 0;
+                    right: -100%;
+                    transition: right $time-trasition;
+                }
+
+                &:hover::after {
+                    left: 0;
+                }
+
+                &:hover::before {
+                    right: 0;
+                }
+            }
+
+        }
+
+    }
+}
+
+//---About-----------------------------------------
+.about-us {
+    background-color: $section-about-color;
+    
+    .row {
+        @extend .flex;
+        gap: 2rem;
+
+        p {
+            text-align: justify;
+        }
+    }
+
+    img {
+        width: 40vw;
+        height: 16rem;
+    }
+}
+
+.text-about-us {
+    width: 40vw;
+}
+
+.about-us a {
+    @extend .style-button;
+    margin-top: 2.5rem;
+}
+
+//---Testimonials----------------------------------
+.testimonials {
+    background-color: $section-testimonials-color;
+
+    .row-testimonials {
+        @extend .flex;
+        gap: 1.5rem;
+
+        .testimonial {
+            flex: 1;
+            background-color: #fff;
+            border-radius: 1rem;
+            padding: 2rem 1.5rem;
+
+            p {
+                text-align: justify;
+            }
+
+        }
+    }
+}
+
+.testimonial p {
+    margin-top: 1rem;
+}
+
+em {
+    display: block;
+    margin-top: 2rem;
+}
+
+//---Products--------------------------------------
+.products {
+    background-color: $section-sponsor-color;
+
+    .row-products {
+        @extend .flex;
+        justify-content: space-between;
+    }
+
+    .row {
+        padding: 5.5rem 0;
+    }
+}
+
+//---Contact---------------------------------------
+.contact-us {
+    background-color: $section-contact-color;
+}
+
+form {
+    @extend.flex;
+    align-items: flex-start;
+    flex-direction: column;
+
+    input {
+        @extend .field-input-form;
+        
+    }
+
+    textarea {
+        @extend .field-input-form;
+        resize: none;
+    }
+
+    button {
+        @extend .style-button;
+        margin-top: 2.5rem;
+    }
+}
+
+//---Top Button------------------------------------
+.go-top-btn {
+    @extend .style-text;
+    background-color: $details-color;
+    border-radius: 100vmax;
+    border: none;
+    position: fixed;
+    bottom: 1.5rem;
+    right: 1.5rem;
+    transition: bottom $time-trasition;
+    line-height: 0;
+    height: 3rem;
+    width: 3rem;
+    padding: 0;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .4);
+    cursor: pointer;
+
+    i {
+        color: $text-color;
+        font-size: 1rem;
+    }
+}
+
+//---Footer----------------------------------------
+.footer-container {
+    background-color: $main-color;
+
+    .row {
+        @extend .flex;
+    }
+}
+
+.sitemap li {
+    list-style: none;
+
+    a {
+        @extend .style-text;
+        padding: .5rem 0;
+    }
+}
+
+.information-footer {
+
+    .logo {
+        margin-bottom: 1rem;
+        font-size: 1.4rem;
+    }
+    
+    a {
+        @extend .style-text;
+
+        padding: .5rem 0;
+
+        i.fa-solid {
+            font-size: 1.1em;
+            color: $text-color;
+            margin-right: .8rem;
+        }
+    }
+}
+
+//---Copyright-------------------------------------
+.copyright-container {
+    background-color: darken($main-color, 10);
+
+    .row {
+        padding: 1.2rem 0;
+
+        
+
+        p {
+            text-align: center;
+            font-size: .7rem;
+            color: $text-color;
+        }
+    }
+}
+
+@import 'styles-responsive';

@@ -1,0 +1,34 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+    max-width: 100%;
+}
+
+html, body {
+    width: 100vw;
+    height: 100vh;
+    scroll-behavior: smooth;
+}
+
+
+//---Reset Fonts's size-------------------------------
+h2 {
+    font-size: 1.6rem;
+}
+
+h3 {
+    font-size: 1rem;
+}
+
+p,
+a,
+em, 
+button,
+label,
+input,
+textarea,
+i {
+   font-size: .8rem; 
+}
