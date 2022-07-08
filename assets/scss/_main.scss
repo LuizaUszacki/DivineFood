@@ -1,15 +1,3 @@
-@import 'reset';
-
-//---Variables-------------------------------------
-$main-color: #1a1a1a;
-$details-color: #c73636;
-$section-about-color: #fdfdfd;
-$section-testimonials-color: lighten($main-color, 40);
-$section-sponsor-color: #fdfdfd;
-$section-contact-color: #eeeeee;
-$text-color: #fff;
-$time-trasition: .3s;
-
 //---Inheritance-----------------------------------
 .flex {
     display: flex;
@@ -100,8 +88,25 @@ header {
 
 .text-header-container {
     position: absolute;
-    top: 60%;
-    left: 7.5vw;
+    bottom: 0;
+    width: 100%;
+    background: #c73636b0;
+
+    .row {
+        padding: 3rem 0 5rem;
+
+        h1 {
+            font-size: 3rem;
+            text-shadow:    1px 1px 0 darken($text-color, 90), 
+                            2px 2px 0 darken($text-color, 70),
+                            3px 3px 0 darken($text-color, 50),
+                            4px 4px 0 darken($text-color, 30);
+        }
+
+        h2 {
+            margin-top: .8rem;
+        }
+    }
 }
 
 //---Navbar----------------------------------------
@@ -181,8 +186,10 @@ nav {
     }
 
     img {
-        width: 40vw;
-        height: 16rem;
+        width: 35vw;
+        height: 20rem;
+        object-fit: cover;
+        object-position: 50% 0;
     }
 }
 
@@ -228,11 +235,42 @@ em {
 
 //---Products--------------------------------------
 .products {
-    background-color: $section-sponsor-color;
+    background-color: $section-product-color;
 
     .row-products {
-        @extend .flex;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        grid-template-rows: auto;
+        grid-auto-flow: dense;
         justify-content: space-between;
+        gap: 1rem;
+
+        figure {
+            border: 1px solid #6666;
+            border-radius: 5px;
+            padding: .5rem;
+            
+            img {
+                margin-bottom: .5rem;
+                border-radius: 5px;
+                height: 18rem;
+                width: 100%;
+                object-fit: cover;
+                object-position: center;
+            }
+
+            figcaption {
+                text-align: center;
+            }
+
+            &:nth-of-type(1),
+            &:nth-of-type(2),
+            &:nth-of-type(6),
+            &:nth-of-type(7) {
+                grid-column: 2 span;
+            }
+        }
+
     }
 
     .row {
@@ -343,5 +381,3 @@ form {
         }
     }
 }
-
-@import 'styles-responsive';

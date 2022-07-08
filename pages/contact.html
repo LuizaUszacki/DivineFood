@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+
+    <!-- Meta tags -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Link tags -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Arima:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <script type="module" src="../assets/js/hideShowMenu.js"></script>
+    <title>DivineFood</title>
+</head>
+<body>
+    <header class="hero">
+        <nav id="menu">
+            <div class="row row-nav">
+                <a href="../index.html" class="logo">Divine<span>Food</span></a>
+                <div class="container-links-menu">
+                    <i class="fa-solid fa-bars"></i>
+                    <ul>
+                        <li><i class="fa-solid fa-x"></i></li>
+                        <li><a href="./about.html">Sobre</a></li>
+                        <li><a href="./products.html">Produtos</a></li>                        
+                        <li><a href="./testimonials.html">Avaliações</a></li>
+                        <li><a href="./contact.html">Fale Conosco</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div class="text-header-container">
+            <div class="row">
+                <h1>Bem-vindo ao DivineFood</h1>
+                <h2>Temos o melhor cardápio para festas</h2>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section class="contact-us" id="contact-us">
+            <div class="row">
+                <h2>Contate-nos</h2>
+                <h3>Se tiver alguma dúvida, reclamação ou elogio, fale conosco!</h3>
+                <form action="https://formsubmit.co/fcd440d7f64f7f591fed2954ae613f20" method="POST">
+                    <input type="hidden" name="_subject" value="New submission from DivineFood!">
+                    <input type="hidden" name="_captcha" value="false">
+                    <label for="input-name">Nome</label>
+                    <input type="text" name="name" id="input-name" placeholder="Nome completo" maxlength="100" required>
+                    <label for="input-email">E-mail</label>
+                    <input type="email" name="email" id="input-email" placeholder="Insira seu e-mail" maxlength="100" required>
+                    <label for="input-message">Mensagem</label>
+                    <textarea name="message" id="input-message" cols="30" rows="10" placeholder="Insira sua mensagem..." maxlength="300" required></textarea>
+                    
+                    <button type="submit">Enviar</button>
+                </form>
+            </div>
+        </section>
+        <button class="go-top-btn" id="go-top-btn">
+            <i class="fa-solid fa-arrow-up"></i>
+        </button>
+    </main>
+    <footer>
+        <div class="footer-container">
+            <div class="row">
+                <div class="sitemap">
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="./about.html">Sobre</a></li>
+                        <li><a href="./products.html">Produtos</a></li>                        
+                        <li><a href="./testimonials.html">Avaliações</a></li>
+                        <li><a href="./contact.html">Fale Conosco</a></li>
+                    </ul>
+                </div>
+                <div class="information-footer">
+                    <p class="logo">Divine<span>Food</span></p>
+                    <div class="container-phone">
+                        <a href="tel:+99999999999">
+                            <i class="fa-solid fa-phone"></i>
+                            (99) 99999-9999
+                        </a>
+                    </div>
+                    <div class="container-mail">
+                        <a href="mailto:empresa@email.com">
+                            <i class="fa-solid fa-envelope"></i>
+                            empresa@email.com
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="copyright-container">
+            <div class="row">
+                <p>Copyright 2020 All Rights Reserved Company Name.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

@@ -12,6 +12,10 @@ html, body {
   scroll-behavior: smooth;
 }
 
+h1 {
+  font-size: 2rem;
+}
+
 h2 {
   font-size: 1.6rem;
 }
@@ -31,7 +35,7 @@ i {
   font-size: 0.8rem;
 }
 
-.flex, .footer-container .row, form, .products .row-products, .testimonials .row-testimonials, .about-us .row, nav ul, .row-nav {
+.flex, .footer-container .row, form, .testimonials .row-testimonials, .about-us .row, nav ul, .row-nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -112,8 +116,19 @@ header::after {
 
 .text-header-container {
   position: absolute;
-  top: 60%;
-  left: 7.5vw;
+  bottom: 0;
+  width: 100%;
+  background: rgba(199, 54, 54, 0.6901960784);
+}
+.text-header-container .row {
+  padding: 3rem 0 5rem;
+}
+.text-header-container .row h1 {
+  font-size: 3rem;
+  text-shadow: 1px 1px 0 #1a1a1a, 2px 2px 0 #4d4d4d, 3px 3px 0 gray, 4px 4px 0 #b3b3b3;
+}
+.text-header-container .row h2 {
+  margin-top: 0.8rem;
 }
 
 i.fa-x,
@@ -174,8 +189,12 @@ nav ul li a:hover::before {
   text-align: justify;
 }
 .about-us img {
-  width: 40vw;
-  height: 16rem;
+  width: 35vw;
+  height: 20rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: 50% 0;
+     object-position: 50% 0;
 }
 
 .text-about-us {
@@ -215,7 +234,33 @@ em {
   background-color: #fdfdfd;
 }
 .products .row-products {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  grid-template-rows: auto;
+  grid-auto-flow: dense;
   justify-content: space-between;
+  gap: 1rem;
+}
+.products .row-products figure {
+  border: 1px solid rgba(102, 102, 102, 0.4);
+  border-radius: 5px;
+  padding: 0.5rem;
+}
+.products .row-products figure img {
+  margin-bottom: 0.5rem;
+  border-radius: 5px;
+  height: 18rem;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+.products .row-products figure figcaption {
+  text-align: center;
+}
+.products .row-products figure:nth-of-type(1), .products .row-products figure:nth-of-type(2), .products .row-products figure:nth-of-type(6), .products .row-products figure:nth-of-type(7) {
+  grid-column: 2 span;
 }
 .products .row {
   padding: 5.5rem 0;
@@ -319,6 +364,10 @@ form textarea {
   .about-us .text-about-us {
     width: 100%;
   }
+
+  .text-header-container .row h1 {
+    font-size: 2.5rem;
+  }
 }
 @media (max-width: 600px) {
   form input,
@@ -339,6 +388,13 @@ form textarea {
     margin-block: 4rem 2rem;
   }
 
+  .text-header-container .row {
+    padding: 2rem 0 4rem;
+  }
+  .text-header-container .row h1 {
+    font-size: 2rem;
+  }
+
   h2 {
     font-size: 1.5em;
   }
@@ -346,4 +402,26 @@ form textarea {
   h3 {
     font-size: 1.1rem;
   }
-}/*# sourceMappingURL=styles.css.map */
+
+  .row-products figure:nth-of-type(2),
+.row-products figure:nth-of-type(7) {
+    display: none;
+  }
+}
+@media (max-width: 400px) {
+  .products .row-products {
+    grid-template-columns: 1fr;
+  }
+  .products .row-products figure.figure-products {
+    grid-column: 1 span;
+  }
+
+  .text-header-container .row h2 {
+    display: none;
+  }
+
+  .row-products figure:nth-of-type(3),
+.row-products figure:nth-of-type(5) {
+    display: none;
+  }
+}/*# sourceMappingURL=style.css.map */
