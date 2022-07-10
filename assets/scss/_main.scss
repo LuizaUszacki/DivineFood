@@ -45,7 +45,7 @@
     background-color: $text-color;
 }
 
-//---Apply to more than one tag--------------------
+//---Apply thoughout the page----------------------
 .logo {
     text-decoration: none;
     font-size: 1.6rem;
@@ -61,12 +61,30 @@ h3 {
     margin-block: .3rem 2.5rem;
 }
 
-
 .row {
     width: 85vw;
     margin: auto;
     padding: 7rem 0;
 }
+
+main {
+    section:nth-of-type(1) {
+        background-color: $color-first-section;
+    }
+
+    section:nth-of-type(2) {
+        background-color: $color-second-section;
+    }
+
+    section:nth-of-type(3) {
+        background-color: $color-third-section;
+    }
+
+    section:nth-of-type(4) {
+        background-color: $color-fourth-section;
+    }
+}
+
 
 //---Header----------------------------------------
 header {
@@ -90,13 +108,12 @@ header {
     position: absolute;
     bottom: 0;
     width: 100%;
-    background: #c73636b0;
+    background: rgba($details-color, .65);
 
     .row {
         padding: 3rem 0 5rem;
 
         h1 {
-            font-size: 3rem;
             text-shadow:    1px 1px 0 darken($text-color, 90), 
                             2px 2px 0 darken($text-color, 70),
                             3px 3px 0 darken($text-color, 50),
@@ -110,12 +127,41 @@ header {
 }
 
 //---Navbar----------------------------------------
-i.fa-x, 
-i.fa-bars {
+// i.fa-x, 
+// i.fa-bars {
+//     color: $text-color;
+//     font-size: 1.2rem;
+// }
+
+// #btn-menu-hamburger {
+//     display: none;
+// }
+
+#btn-menu-hamburger,
+#btn-close-menu {
+    background-color: transparent;
     color: $text-color;
-    font-size: 1.2rem;
+    border: 0;
+    cursor: pointer;
+
+    i {
+        font-size: $sub-title-font-size-big;
+    }
+}
+
+#btn-menu-hamburger,
+#btn-close-menu {
     display: none;
 }
+
+#btn-close-menu i {
+    font-size: 1.5rem;
+    position: absolute;
+    z-index: 1001;
+    top: 30px;
+    right: 30px;
+}
+
 
 .row-nav {
     @extend .flex;
@@ -173,8 +219,7 @@ nav {
 }
 
 //---About-----------------------------------------
-.about-us {
-    background-color: $section-about-color;
+.about {
     
     .row {
         @extend .flex;
@@ -204,7 +249,6 @@ nav {
 
 //---Testimonials----------------------------------
 .testimonials {
-    background-color: $section-testimonials-color;
 
     .row-testimonials {
         @extend .flex;
@@ -235,7 +279,6 @@ em {
 
 //---Products--------------------------------------
 .products {
-    background-color: $section-product-color;
 
     .row-products {
         display: grid;
@@ -247,12 +290,10 @@ em {
 
         figure {
             border: 1px solid #6666;
-            border-radius: 5px;
-            padding: .5rem;
+            border-radius: 10px;
+            overflow: hidden;
             
             img {
-                margin-bottom: .5rem;
-                border-radius: 5px;
                 height: 18rem;
                 width: 100%;
                 object-fit: cover;
@@ -260,13 +301,11 @@ em {
             }
 
             figcaption {
+                margin-block: .5rem;
                 text-align: center;
             }
 
-            &:nth-of-type(1),
-            &:nth-of-type(2),
-            &:nth-of-type(6),
-            &:nth-of-type(7) {
+            &.expanded-figure {
                 grid-column: 2 span;
             }
         }
@@ -279,10 +318,6 @@ em {
 }
 
 //---Contact---------------------------------------
-.contact-us {
-    background-color: $section-contact-color;
-}
-
 form {
     @extend.flex;
     align-items: flex-start;

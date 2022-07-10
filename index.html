@@ -15,23 +15,23 @@
     <link href="https://fonts.googleapis.com/css2?family=Arima:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./assets/css/style.css">
     <script type="module" src="./assets/js/hideShowMenu.js"></script>
+    <script type="module" src="./assets/js/menuHamburger.js"></script>
     <title>My website</title>
 </head>
-<body>
+<body class="home-page">
     <header class="hero hero-index">
         <nav id="menu">
             <div class="row row-nav">
                 <a href="./index.html" class="logo">Divine<span>Food</span></a>
-                <div class="container-links-menu">
-                    <i class="fa-solid fa-bars"></i>
-                    <ul>
-                        <li><i class="fa-solid fa-x"></i></li>
-                        <li><a href="./pages/about.html">Sobre</a></li>
-                        <li><a href="./pages/products.html">Produtos</a></li>                        
-                        <li><a href="./pages/testimonials.html">Avaliações</a></li>
-                        <li><a href="./pages/contact.html">Fale Conosco</a></li>
-                    </ul>
-                </div>
+                <button id="btn-menu-hamburger"><i class="fa-solid fa-bars"></i></button>                   
+                <ul class="menu-ul">
+                    <li><button id="btn-close-menu"><i class="fa-solid fa-x"></i></button></li>
+                    <li><a href="./index.html">Home</a></li>
+                    <li><a href="./pages/about.html">Sobre</a></li>
+                    <li><a href="./pages/products.html">Produtos</a></li>                        
+                    <li><a href="./pages/testimonials.html">Avaliações</a></li>
+                    <li><a href="./pages/contact.html">Fale Conosco</a></li>
+                </ul>
             </div>
         </nav>
         <div class="text-header-container">
@@ -42,7 +42,7 @@
         </div>
     </header>
     <main>
-        <section class="about-us" id="about-us">
+        <section class=" about about-us" id="about-us">
             <div class="row">
                 <div class="text-about-us">
                     <h2>Sobre nós</h2>
@@ -98,11 +98,11 @@
                 <h2>Alguns de nossos produtos</h2>
                 <h3>Dê uma olhada nos nossos produtos mais vendidos</h3>
                 <div class="row-products">
-                    <figure class="figure-products">
+                    <figure class="figure-products expanded-figure">
                         <img src="https://images.unsplash.com/photo-1473093295043-cdd812d0e601?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80" alt="Massa">
                         <figcaption>Massa</figcaption>
                     </figure>
-                    <figure class="figure-products">
+                    <figure class="figure-products expanded-figure">
                         <img src="https://images.unsplash.com/photo-1499028344343-cd173ffc68a9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80" alt="Hamburguer">
                         <figcaption>Hamburguer</figcaption>
                     </figure>
@@ -118,11 +118,11 @@
                         <img src="https://images.unsplash.com/photo-1603105037880-880cd4edfb0d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80" alt="Sopa Vegetariana">
                         <figcaption>Sopa Vegetariana</figcaption>
                     </figure>
-                    <figure class="figure-products">
+                    <figure class="figure-products expanded-figure">
                         <img src="https://images.unsplash.com/photo-1561043433-aaf687c4cf04?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80" alt="Salada">
                         <figcaption>Salada</figcaption>
                     </figure>
-                    <figure class="figure-products">
+                    <figure class="figure-products expanded-figure">
                         <img src="https://images.unsplash.com/photo-1506354666786-959d6d497f1a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80" alt="Pizza">
                         <figcaption>Pizza</figcaption>
                     </figure>

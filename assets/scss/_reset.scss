@@ -15,15 +15,16 @@ html, body {
 
 //---Reset Fonts's size-------------------------------
 h1 {
-    font-size: 2rem;
+    font-size: $hero-font-size-big;
 }
 
 h2 {
-    font-size: 1.6rem;
+    font-size: $title-font-size-big;
 }
 
-h3 {
-    font-size: 1rem;
+h3, 
+h4 {
+    font-size: $sub-title-font-size-big;
 }
 
 p,
@@ -34,5 +35,5 @@ label,
 input,
 textarea,
 i {
-   font-size: .8rem; 
+   font-size: $parag-font-size-big; 
 }

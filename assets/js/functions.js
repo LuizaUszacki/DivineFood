@@ -7,3 +7,7 @@ export function hideMenuAndButton(nav, button, buttonBottom, navHeight, buttonHe
     nav.style.top = `-${navHeight}px`
     button.style.bottom = `-${buttonHeight + buttonBottom}px`
 }
+
+export function toggleMenu(ul) {
+    ul.classList.toggle('active')
+}

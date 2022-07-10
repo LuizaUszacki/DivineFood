@@ -1,13 +1,22 @@
-//---Variables-------------------------------------
+//---Colors-------------------------
 $main-color: #1a1a1a;
 $details-color: #c73636;
-
-$section-about-color: #fdfdfd;
-$section-testimonials-color: lighten($main-color, 40);
-$section-product-color: #fdfdfd;
-$section-contact-color: #eeeeee;
-
+//---Section Colors-----------------
+$color-first-section: #fdfdfd;
+$color-second-section: #ccc;
+$color-third-section: #fdfdfd;
+$color-fourth-section: #ececec;
+//---Font-size----------------------
+$hero-font-size-big: 3rem;
+$hero-font-size-small: 2.5rem;
+$hero-font-size-smaller: 2rem;
+$title-font-size-big: 1.6rem;
+$title-font-size-small: 1.5em;
+$sub-title-font-size-big: 1rem;
+$sub-title-font-size-small: 1.1rem;
+$parag-font-size-big: .8rem;
+//---Text---------------------------
 $text-color: #fff;
 $text-font: 'Open Sans', sans-serif;
-
+//---Time---------------------------
 $time-trasition: .3s;

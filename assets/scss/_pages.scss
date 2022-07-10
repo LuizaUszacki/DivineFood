@@ -1,0 +1,41 @@
+
+//---Products Page----------------------------------------
+.products {
+    a {
+        font-size: inherit;
+        color: $details-color;
+        transition: color $time-trasition;
+    
+        &:hover {
+            color: lighten($details-color, 10);
+        }
+    }
+
+    h4 {
+        text-transform: uppercase;
+        margin-block: 2rem;
+        color: $details-color;
+    }
+}
+
+//---About Page-------------------------------------------
+.our-history img {
+    object-position: center 80%;
+}
+
+.our-team img {
+    object-position: center;
+}
+ 
+//---Contact Page-----------------------------------------
+.contact-page {
+    section.contact-us {
+        background-color: $color-second-section;
+    }
+}
+
+.testimonials-page {
+    section.testimonials {
+        background-color: $color-second-section;
+    }
+}

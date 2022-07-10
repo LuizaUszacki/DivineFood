@@ -15,17 +15,19 @@
     <link href="https://fonts.googleapis.com/css2?family=Arima:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../assets/css/style.css">
     <script type="module" src="../assets/js/hideShowMenu.js"></script>
+    <script type="module" src="../assets/js/menuHamburger.js"></script>
     <title>DivineFood</title>
 </head>
-<body>
+<body class="testimonials-page">
     <header class="hero">
         <nav id="menu">
             <div class="row row-nav">
                 <a href="../index.html" class="logo">Divine<span>Food</span></a>
                 <div class="container-links-menu">
-                    <i class="fa-solid fa-bars"></i>
-                    <ul>
-                        <li><i class="fa-solid fa-x"></i></li>
+                    <button id="btn-menu-hamburger"><i class="fa-solid fa-bars"></i></button>                   
+                    <ul class="menu-ul">
+                        <li><button id="btn-close-menu"><i class="fa-solid fa-x"></i></button></li>
+                        <li><a href="../index.html">Home</a></li>
                         <li><a href="./about.html">Sobre</a></li>
                         <li><a href="./products.html">Produtos</a></li>                        
                         <li><a href="./testimonials.html">Avaliações</a></li>
@@ -36,15 +38,14 @@
         </nav>
         <div class="text-header-container">
             <div class="row">
-                <h1>Bem-vindo ao DivineFood</h1>
-                <h2>Temos o melhor cardápio para festas</h2>
+                <h1>Avaliações</h1>
             </div>
         </div>
     </header>
     <main>
         <section class="testimonials" id="testimonials">
             <div class="row">
-                <h2>Avaliações</h2>
+                <h2>Nossas Avaliações</h2>
                 <h3>Descubra o que nossos clientes falam</h3>
                 <div class="row-testimonials">
                     <div class="testimonial">

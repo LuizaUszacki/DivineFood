@@ -15,6 +15,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Arima:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../assets/css/style.css">
     <script type="module" src="../assets/js/hideShowMenu.js"></script>
+    <script type="module" src="../assets/js/menuHamburger.js"></script>
     <title>DivineFood</title>
 </head>
 <body>
@@ -23,9 +24,10 @@
             <div class="row row-nav">
                 <a href="../index.html" class="logo">Divine<span>Food</span></a>
                 <div class="container-links-menu">
-                    <i class="fa-solid fa-bars"></i>
-                    <ul>
-                        <li><i class="fa-solid fa-x"></i></li>
+                    <button id="btn-menu-hamburger"><i class="fa-solid fa-bars"></i></button>                   
+                    <ul class="menu-ul">
+                        <li><button id="btn-close-menu"><i class="fa-solid fa-x"></i></button></li>
+                        <li><a href="../index.html">Home</a></li>
                         <li><a href="./about.html">Sobre</a></li>
                         <li><a href="./products.html">Produtos</a></li>                        
                         <li><a href="./testimonials.html">Avaliações</a></li>
@@ -36,23 +38,27 @@
         </nav>
         <div class="text-header-container">
             <div class="row">
-                <h1>Bem-vindo ao DivineFood</h1>
-                <h2>Temos o melhor cardápio para festas</h2>
+                <h1>Produtos</h1>
             </div>
         </div>
     </header>
     <main>
         <section class="products" id="products">
             <div class="row">
-                <h2>Alguns de nossos produtos</h2>
-                <h3>Dê uma olhada nos nossos produtos mais vendidos</h3>
-                <div class="row-products">
+                <h2>Nossos Produtos</h2>
+                <h3>Para contratar os nossos serviços e ter algum de nosso produtos na sua festa, <a href="./contact.html">fale conosco</a>.</h3>
+                <h4>Salgados</h4>
+                <div class="row-products">   
                     <figure class="figure-products">
+                        <img src="https://images.unsplash.com/photo-1432139509613-5c4255815697?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=385&q=80" alt="Bife">
+                        <figcaption>Bife</figcaption>
+                    </figure>
+                    <figure class="figure-products expanded-figure">
                         <img src="https://images.unsplash.com/photo-1473093295043-cdd812d0e601?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80" alt="Massa">
                         <figcaption>Massa</figcaption>
                     </figure>
-                    <figure class="figure-products">
-                        <img src="https://images.unsplash.com/photo-1499028344343-cd173ffc68a9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80" alt="Hamburguer">
+                    <figure class="figure-products expanded-figure">
+                        <img class="expanded-img" src="https://images.unsplash.com/photo-1499028344343-cd173ffc68a9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80" alt="Hamburguer">
                         <figcaption>Hamburguer</figcaption>
                     </figure>
                     <figure class="figure-products">
@@ -60,185 +66,94 @@
                         <figcaption>Taco</figcaption>
                     </figure>
                     <figure class="figure-products">
-                        <img src="https://images.unsplash.com/photo-1563805042-7684c019e1cb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=327&q=80" alt="Sorvete">
-                        <figcaption>Sorvete</figcaption>
-                    </figure>
-                    <figure class="figure-products">
                         <img src="https://images.unsplash.com/photo-1603105037880-880cd4edfb0d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80" alt="Sopa Vegetariana">
                         <figcaption>Sopa Vegetariana</figcaption>
                     </figure>
-                    <figure class="figure-products">
+                    <figure class="figure-products expanded-figure">
                         <img src="https://images.unsplash.com/photo-1561043433-aaf687c4cf04?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80" alt="Salada">
                         <figcaption>Salada</figcaption>
                     </figure>
-                    <figure class="figure-products">
+                    <figure class="figure-products expanded-figure">
                         <img src="https://images.unsplash.com/photo-1506354666786-959d6d497f1a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80" alt="Pizza">
                         <figcaption>Pizza</figcaption>
                     </figure>
                     <figure class="figure-products">
-                        <img src="https://images.unsplash.com/photo-1565958011703-44f9829ba187?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=465&q=80" alt="Bolo">
-                        <figcaption>Bolo</figcaption>
+                        <img src="https://images.unsplash.com/photo-1564489563601-c53cfc451e93?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80" alt="Sushi">
+                        <figcaption>Sushi</figcaption>
+                    </figure>
+                    <figure class="figure-products expanded-figure">
+                        <img src="https://images.unsplash.com/photo-1563379926898-05f4575a45d8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80" alt="Massa com tomates">
+                        <figcaption>Massa com tomates</figcaption>
+                    </figure>
+                    <figure class="figure-products expanded-figure">
+                        <img src="https://images.unsplash.com/photo-1551978129-b73f45d132eb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=817&q=80" alt="Pizza Vegetariana">
+                        <figcaption>Pizza Vegetariana</figcaption>
+                    </figure>
+                    <figure class="figure-products">
+                        <img src="https://images.unsplash.com/photo-1554433607-66b5efe9d304?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=464&q=80" alt="Sanduíche">
+                        <figcaption>Sanduíche</figcaption>
+                    </figure>
+                    <figure class="figure-products expanded-figure">
+                        <img src="https://images.unsplash.com/photo-1594221708779-94832f4320d1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=464&q=80" alt="Frango Assado">
+                        <figcaption>Frango Assado</figcaption>
+                    </figure>
+                    <figure class="figure-products">
+                        <img src="https://images.unsplash.com/photo-1537790698196-aad88bf9bb27?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=389&q=80" alt="Cachorro-quente">
+                        <figcaption>Cachorro-quente</figcaption>
+                    </figure>
+                    <figure class="figure-products expanded-figure">
+                        <img src="https://images.unsplash.com/photo-1595955545772-0d06367c140d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80" alt="Batata Recheada">
+                        <figcaption>Batata Recheada</figcaption>
+                    </figure>
+                </div>
+
+                <h4>Doces</h4>
+                <div class="row-products">
+                    <figure class="figure-products expanded-figure">
+                        <img src="https://images.unsplash.com/photo-1464305795204-6f5bbfc7fb81?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80" alt="Torta de Frutas Vermelhas">
+                        <figcaption>Torta de Frutas Vermelhas</figcaption>
+                    </figure>
+                    <figure class="figure-products">
+                        <img src="https://images.unsplash.com/photo-1508737804141-4c3b688e2546?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=386&q=80" alt="Bolo de Chocolate">
+                        <figcaption>Bolo de Chocolate</figcaption>
+                    </figure>
+                    <figure class="figure-products">
+                        <img src="https://images.unsplash.com/photo-1577805947697-89e18249d767?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=398&q=80" alt="Milkshake">
+                        <figcaption>Milkshake</figcaption>
                     </figure>
                     <figure class="figure-products">
                         <img src="https://images.unsplash.com/photo-1565958011703-44f9829ba187?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=465&q=80" alt="Bolo">
                         <figcaption>Bolo</figcaption>
                     </figure>
                     <figure class="figure-products">
-                        <img src="https://images.unsplash.com/photo-1565958011703-44f9829ba187?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=465&q=80" alt="Bolo">
-                        <figcaption>Bolo</figcaption>
+                        <img src="https://images.unsplash.com/photo-1563805042-7684c019e1cb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=327&q=80" alt="Sorvete">
+                        <figcaption>Sorvete</figcaption>
+                    </figure>
+                    <figure class="figure-products expanded-figure">
+                        <img src="https://images.unsplash.com/photo-1559715745-e1b33a271c8f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80" alt="Morango com Chocolate">
+                        <figcaption>Morango com Chocolate</figcaption>
+                    </figure>
+                    <figure class="figure-products expanded-figure">
+                        <img src="https://images.unsplash.com/photo-1622622008494-60c9e6b41996?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=661&q=80" alt="Bolo de Morango">
+                        <figcaption>Bolo de Morango</figcaption>
+                    </figure>
+                    <figure class="figure-products expanded-figure">
+                        <img src="https://images.unsplash.com/photo-1600653155864-88227b5b64b0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80" alt="Bolo Arco-íris">
+                        <figcaption>Bolo Arco-íris</figcaption>
                     </figure>
                     <figure class="figure-products">
-                        <img src="https://images.unsplash.com/photo-1565958011703-44f9829ba187?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=465&q=80" alt="Bolo">
-                        <figcaption>Bolo</figcaption>
+                        <img src="https://images.unsplash.com/photo-1558024920-b41e1887dc32?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80" alt="Macarons">
+                        <figcaption>Macarons</figcaption>
                     </figure>
-                    <figure class="figure-products">
-                        <img src="https://images.unsplash.com/photo-1565958011703-44f9829ba187?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=465&q=80" alt="Bolo">
-                        <figcaption>Bolo</figcaption>
+                    <figure class="figure-products expanded-figure">
+                        <img src="https://images.unsplash.com/photo-1612886623977-192b32a0d789?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=871&q=80" alt="Brownie">
+                        <figcaption>Brownie</figcaption>
                     </figure>
-                    <figure class="figure-products">
-                        <img src="https://images.unsplash.com/photo-1565958011703-44f9829ba187?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=465&q=80" alt="Bolo">
-                        <figcaption>Bolo</figcaption>
-                    </figure>
-                    <figure class="figure-products">
-                        <img src="https://images.unsplash.com/photo-1565958011703-44f9829ba187?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=465&q=80" alt="Bolo">
-                        <figcaption>Bolo</figcaption>
-                    </figure>
-                    <figure class="figure-products">
-                        <img src="https://images.unsplash.com/photo-1565958011703-44f9829ba187?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=465&q=80" alt="Bolo">
-                        <figcaption>Bolo</figcaption>
-                    </figure>
-                    <figure class="figure-products">
-                        <img src="https://images.unsplash.com/photo-1565958011703-44f9829ba187?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=465&q=80" alt="Bolo">
-                        <figcaption>Bolo</figcaption>
-                    </figure>
-                    <figure class="figure-products">
-                        <img src="https://images.unsplash.com/photo-1565958011703-44f9829ba187?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=465&q=80" alt="Bolo">
-                        <figcaption>Bolo</figcaption>
-                    </figure>
-                    <figure class="figure-products">
-                        <img src="https://images.unsplash.com/photo-1565958011703-44f9829ba187?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=465&q=80" alt="Bolo">
-                        <figcaption>Bolo</figcaption>
-                    </figure>
-                    <figure class="figure-products">
-                        <img src="https://images.unsplash.com/photo-1565958011703-44f9829ba187?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=465&q=80" alt="Bolo">
-                        <figcaption>Bolo</figcaption>
-                    </figure>
-                    <figure class="figure-products">
-                        <img src="https://images.unsplash.com/photo-1565958011703-44f9829ba187?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=465&q=80" alt="Bolo">
-                        <figcaption>Bolo</figcaption>
-                    </figure>
-                    <figure class="figure-products">
-                        <img src="https://images.unsplash.com/photo-1565958011703-44f9829ba187?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=465&q=80" alt="Bolo">
-                        <figcaption>Bolo</figcaption>
-                    </figure>
-                    <figure class="figure-products">
-                        <img src="https://images.unsplash.com/photo-1565958011703-44f9829ba187?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=465&q=80" alt="Bolo">
-                        <figcaption>Bolo</figcaption>
-                    </figure>
-                    <figure class="figure-products">
-                        <img src="https://images.unsplash.com/photo-1565958011703-44f9829ba187?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=465&q=80" alt="Bolo">
-                        <figcaption>Bolo</figcaption>
-                    </figure>
-                    <figure class="figure-products">
-                        <img src="https://images.unsplash.com/photo-1565958011703-44f9829ba187?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=465&q=80" alt="Bolo">
-                        <figcaption>Bolo</figcaption>
-                    </figure>
-                    <figure class="figure-products">
-                        <img src="https://images.unsplash.com/photo-1565958011703-44f9829ba187?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=465&q=80" alt="Bolo">
-                        <figcaption>Bolo</figcaption>
-                    </figure>
-                    <figure class="figure-products">
-                        <img src="https://images.unsplash.com/photo-1565958011703-44f9829ba187?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=465&q=80" alt="Bolo">
-                        <figcaption>Bolo</figcaption>
-                    </figure>
-                    <figure class="figure-products">
-                        <img src="https://images.unsplash.com/photo-1565958011703-44f9829ba187?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=465&q=80" alt="Bolo">
-                        <figcaption>Bolo</figcaption>
-                    </figure>
-                    <figure class="figure-products">
-                        <img src="https://images.unsplash.com/photo-1565958011703-44f9829ba187?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=465&q=80" alt="Bolo">
-                        <figcaption>Bolo</figcaption>
-                    </figure>
-                    <figure class="figure-products">
-                        <img src="https://images.unsplash.com/photo-1565958011703-44f9829ba187?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=465&q=80" alt="Bolo">
-                        <figcaption>Bolo</figcaption>
-                    </figure>
-                    <figure class="figure-products">
-                        <img src="https://images.unsplash.com/photo-1565958011703-44f9829ba187?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=465&q=80" alt="Bolo">
-                        <figcaption>Bolo</figcaption>
-                    </figure>
-                    <figure class="figure-products">
-                        <img src="https://images.unsplash.com/photo-1565958011703-44f9829ba187?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=465&q=80" alt="Bolo">
-                        <figcaption>Bolo</figcaption>
-                    </figure>
-                    <figure class="figure-products">
-                        <img src="https://images.unsplash.com/photo-1565958011703-44f9829ba187?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=465&q=80" alt="Bolo">
-                        <figcaption>Bolo</figcaption>
-                    </figure>
-                    <figure class="figure-products">
-                        <img src="https://images.unsplash.com/photo-1565958011703-44f9829ba187?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=465&q=80" alt="Bolo">
-                        <figcaption>Bolo</figcaption>
-                    </figure>
-                    <figure class="figure-products">
-                        <img src="https://images.unsplash.com/photo-1565958011703-44f9829ba187?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=465&q=80" alt="Bolo">
-                        <figcaption>Bolo</figcaption>
-                    </figure>
-                    <figure class="figure-products">
-                        <img src="https://images.unsplash.com/photo-1565958011703-44f9829ba187?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=465&q=80" alt="Bolo">
-                        <figcaption>Bolo</figcaption>
-                    </figure>
-                    <figure class="figure-products">
-                        <img src="https://images.unsplash.com/photo-1565958011703-44f9829ba187?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=465&q=80" alt="Bolo">
-                        <figcaption>Bolo</figcaption>
-                    </figure>
-                    <figure class="figure-products">
-                        <img src="https://images.unsplash.com/photo-1565958011703-44f9829ba187?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=465&q=80" alt="Bolo">
-                        <figcaption>Bolo</figcaption>
-                    </figure>
-                    <figure class="figure-products">
-                        <img src="https://images.unsplash.com/photo-1565958011703-44f9829ba187?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=465&q=80" alt="Bolo">
-                        <figcaption>Bolo</figcaption>
-                    </figure>
-                    <figure class="figure-products">
-                        <img src="https://images.unsplash.com/photo-1565958011703-44f9829ba187?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=465&q=80" alt="Bolo">
-                        <figcaption>Bolo</figcaption>
-                    </figure>
-                    <figure class="figure-products">
-                        <img src="https://images.unsplash.com/photo-1565958011703-44f9829ba187?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=465&q=80" alt="Bolo">
-                        <figcaption>Bolo</figcaption>
-                    </figure>
-                    <figure class="figure-products">
-                        <img src="https://images.unsplash.com/photo-1565958011703-44f9829ba187?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=465&q=80" alt="Bolo">
-                        <figcaption>Bolo</figcaption>
-                    </figure>
-                    <figure class="figure-products">
-                        <img src="https://images.unsplash.com/photo-1565958011703-44f9829ba187?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=465&q=80" alt="Bolo">
-                        <figcaption>Bolo</figcaption>
-                    </figure>
-                    <figure class="figure-products">
-                        <img src="https://images.unsplash.com/photo-1565958011703-44f9829ba187?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=465&q=80" alt="Bolo">
-                        <figcaption>Bolo</figcaption>
-                    </figure>
-                    <figure class="figure-products">
-                        <img src="https://images.unsplash.com/photo-1565958011703-44f9829ba187?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=465&q=80" alt="Bolo">
-                        <figcaption>Bolo</figcaption>
-                    </figure>
-                    <figure class="figure-products">
-                        <img src="https://images.unsplash.com/photo-1565958011703-44f9829ba187?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=465&q=80" alt="Bolo">
-                        <figcaption>Bolo</figcaption>
-                    </figure>
-                    <figure class="figure-products">
-                        <img src="https://images.unsplash.com/photo-1565958011703-44f9829ba187?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=465&q=80" alt="Bolo">
-                        <figcaption>Bolo</figcaption>
-                    </figure>
-                    <figure class="figure-products">
-                        <img src="https://images.unsplash.com/photo-1565958011703-44f9829ba187?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=465&q=80" alt="Bolo">
-                        <figcaption>Bolo</figcaption>
-                    </figure>
-                    <figure class="figure-products">
-                        <img src="https://images.unsplash.com/photo-1565958011703-44f9829ba187?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=465&q=80" alt="Bolo">
-                        <figcaption>Bolo</figcaption>
-                    </figure>
+
+
+
+
+
                 </div>
             </div>
         </section>
