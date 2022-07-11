@@ -34,8 +34,21 @@
     }
 }
 
+//---Testimonials Page------------------------------------
 .testimonials-page {
     section.testimonials {
         background-color: $color-second-section;
     }
+}
+
+.testimonials-page div.row-testimonials {
+    display: block;
+    column-count: 3;
+    column-width: 200px;
+    column-gap: 1rem;
+}
+
+.testimonials-page div.row-testimonials .testimonial {
+    margin-bottom: 1rem;
+    break-inside: avoid;
 }
